@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+@keyframes moveWheel {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(40px);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-100%);
+    }
+    
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+#wheel {
+    animation: moveWheel 2s infinite ease-in-out;
+  }
+  
+
+

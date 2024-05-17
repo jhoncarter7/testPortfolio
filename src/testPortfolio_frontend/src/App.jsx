@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { testPortfolio_backend } from 'declarations/testPortfolio_backend';
 
+import Home from './components/Home';
+import Quality from './components/Quality';
+import About from './components/About';
+import Projects from './components/Projects';
+import Service from './components/Service';
+import BlogSection from './components/BlogSection';
+
 function App() {
   const [greeting, setGreeting] = useState('');
 
@@ -14,18 +21,16 @@ function App() {
   }
 
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
-  );
+    <>
+      <Home />
+      <Quality />
+      <About/>
+      <Projects/>
+      <Service/>
+      <BlogSection/>
+    </>
+
+  )
 }
 
 export default App;
